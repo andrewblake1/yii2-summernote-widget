@@ -1,0 +1,16 @@
+<?php
+namespace Zelenin\yii\widgets\Summernote;
+
+use yii\web\AssetBundle;
+
+class FontawesomeAsset extends AssetBundle
+{
+    public $sourcePath = '@vendor/zelenin/yii2-summernote-widget/assets/fontawesome';
+    public $depends = ['yii\bootstrap\BootstrapAsset'];
+
+    public function init()
+    {
+        $this->css[] = YII_DEBUG ? 'css/font-awesome.css' : 'css/font-awesome.min.css';
+        parent::init();
+    }
+}

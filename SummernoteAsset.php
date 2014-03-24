@@ -5,7 +5,7 @@ use yii\web\AssetBundle;
 
 class SummernoteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/HackerWins/summernote';
+    public $sourcePath = '@vendor/zelenin/yii2-summernote-widget/assets/summernote';
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset',
         'Zelenin\yii\widgets\Summernote\FontawesomeAsset'
