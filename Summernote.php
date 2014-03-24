@@ -1,6 +1,10 @@
 <?php
+/**
+ * @copyright Aleksandr Zelenin <aleksandr@zelenin.me>
+ */
 namespace Zelenin\yii\widgets\Summernote;
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
@@ -23,6 +27,9 @@ class Summernote extends InputWidget
     {
         $view = $this->getView();
         SummernoteAsset::register($view);
+        if (ArrayHelper::getValue($this->clientOptions, 'lang', null)) {
+            LanguageAsset::register($view)->language = $this->clientOptions['lang'];
+        }
         echo $this->hasModel()
             ? Html::activeTextarea($this->model, $this->attribute, $this->options)
             : Html::textarea($this->name, $this->value, $this->options);

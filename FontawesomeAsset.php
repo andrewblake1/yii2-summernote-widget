@@ -1,8 +1,15 @@
 <?php
+/**
+ * @copyright Aleksandr Zelenin <aleksandr@zelenin.me>
+ */
 namespace Zelenin\yii\widgets\Summernote;
 
 use yii\web\AssetBundle;
 
+/**
+ * Class FontawesomeAsset
+ * @package Zelenin\yii\widgets\Summernote
+ */
 class FontawesomeAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/zelenin/yii2-summernote-widget/assets/fontawesome';
