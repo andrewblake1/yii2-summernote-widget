@@ -5,13 +5,16 @@ use yii\web\AssetBundle;
 
 class SummernoteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/zelenin/yii2-summernote-widget/assets';
-    public $depends = ['yii\bootstrap\BootstrapPluginAsset'];
+    public $sourcePath = '@vendor/HackerWins/summernote';
+    public $depends = [
+        'yii\bootstrap\BootstrapPluginAsset',
+        'Zelenin\yii\widgets\Summernote\FontawesomeAsset'
+    ];
 
     public function init()
     {
-        $this->css[] = 'summernote.css';
-        $this->js[] = YII_DEBUG ? 'summernote.js' : 'summernote.min.js';
+        $this->css[] = 'dist/summernote.css';
+        $this->js[] = YII_DEBUG ? 'dist/summernote.js' : 'dist/summernote.min.js';
         parent::init();
     }
 }
