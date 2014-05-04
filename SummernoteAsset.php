@@ -7,7 +7,6 @@ namespace Zelenin\yii\widgets\Summernote;
 use Yii;
 use yii\web\AssetBundle;
 
-
 class SummernoteAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/zelenin/yii2-summernote-widget/assets/summernote/dist';
@@ -19,7 +18,9 @@ class SummernoteAsset extends AssetBundle
     public function init()
     {
         $this->css[] = 'summernote.css';
-        $this->js[] = YII_DEBUG ? 'summernote.js' : 'summernote.min.js';
+        $this->js[] = YII_DEBUG
+            ? 'summernote.js'
+            : 'summernote.min.js';
 
         parent::init();
     }

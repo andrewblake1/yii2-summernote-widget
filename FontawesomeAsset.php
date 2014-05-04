@@ -17,7 +17,9 @@ class FontawesomeAsset extends AssetBundle
 
     public function init()
     {
-        $this->css[] = YII_DEBUG ? 'css/font-awesome.css' : 'css/font-awesome.min.css';
+        $this->css[] = YII_DEBUG
+            ? 'css/font-awesome.css'
+            : 'css/font-awesome.min.css';
         parent::init();
     }
 }
